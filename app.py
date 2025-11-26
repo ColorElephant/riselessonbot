@@ -260,7 +260,7 @@ def webhook():
             parts = text.split(maxsplit=1)
             if len(parts) == 2 and parts[1].strip().isdigit():
                 RUNTIME_TARGET["target"] = parts[1].strip()
-                send_message(chat_id, f"Runtime target set to: {RUNTIME_TARGET['target']}")
+                send_message(chat_id, f"Runtime target set to: {RUNTIME_TARGET['target']})
             else:
                 send_message(chat_id, "Usage: /settarget <chat_id>")
             return jsonify({"ok": True})
